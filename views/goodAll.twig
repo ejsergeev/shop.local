@@ -1,0 +1,29 @@
+{% extends "main.twig" %}
+
+  {% block title %}{{title}}{% endblock %}
+{% block content %}
+<script>
+    function addGood(id){
+      jQuery.ajax({
+        url:'http://localhost/gbphp/basket/ajax',
+        success: function(response){
+          console.log(response);
+        }
+      });
+    }
+</script>
+  <h1>Goods</h1>
+  <div class="goods">
+      {% for good in goods %}
+      <div class="goods__item">
+          <img class="item__img" src="{{good.good_image}}">
+          <a href='/good/one?id={{good.id}}'>{{ good.good_name}}</a><br>
+          <p>{{good.good_price}}</p>
+          <a href='/basket/add?id={{good.id}}'>Add to basket</a><br>
+      </div>
+      {% endfor %}
+  </div>
+  <div class="more">
+    <a href="?lim=">More..</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #0e1111;
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  min-height: calc(100vh - 100px);
+}
+
+.header {
+  background: #0e1111;
+  height: 100px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px gray;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  color: #0e1111;
+  line-height: 20px;
+  text-align: center;
+  transition: border-bottom 1s;
+}
+
+li a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 1px #0e1111;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+li a:hover:after { transform: scaleX(1); }
+li a.fromRight:after{ transform-origin:100% 50%; }
+li a.fromLeft:after{  transform-origin:  0% 50%; }
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  height: 40px;
+  margin-top: 20px;
+  border-bottom: 1px solid #0e1111;
+  margin-bottom: 29px;
+  box-shadow: 0 2px 2px -2px gray;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.goods {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer {
+  height: 100px;
+  margin-top: 20px;
+  background-color: #0e1111;
+  box-shadow: 0 2px 2px -2px gray;
+}
+
+.caption {
+  margin-bottom: 10px;
+}
+
+.goods__item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #0e1111;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.item__img {
+  border: 1px solid #0e1111;
+}
+
+.basket__item {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order {
+  margin-top: 30px;
+}
+
+.nav__item {
+  display: flex;
+}
+
+.fas {
+  margin-right: 10px;
+}
+
+.basket__item-name {
+  width: 60%;
+}
+.basket__item-count, .basket__item-add, .basket__item-dec, .basket__item-del {
+  width: 10%;
+  text-align: center;
+}
+
+.basket__caption {
+  border-bottom: 1px solid #0e1111;
+  box-shadow: 0 2px 2px -2px gray;
+  padding-bottom: 20px;
+}
+
+.item__caption {
+    text-transform: uppercase;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}

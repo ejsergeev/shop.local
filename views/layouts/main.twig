@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="http://shop.local/css/style.css">
+      <link rel="shortcut icon" href="http://shop.local/favicon.png" type="image/png">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+      <script src="https://kit.fontawesome.com/84a693c650.js" crossorigin="anonymous"></script>
+      {% block head %}
+          <title>{% block title %}{% endblock %}SHOP</title>
+      {% endblock %}
+    </head>
+    <body>
+      <div class="wrapper">
+      <header>
+        <div class="header container">
+        </div>
+      </header>
+      <main>
+        <nav>
+          <div class="container">
+            <ul class="nav">
+              {% block menu %}
+                  {% for item in menu %}
+                  <div class="nav__item">
+                      {% if item.name == 'Basket' %}
+                        <i class="fas fa-shopping-cart"></i>
+                      {% endif %}
+                        <li><a class="item__caption" href='{{item.href}}'>{{item.name}}</a></li>
+                  </div>
+                  {% else %} <li><a href="/">Home</a></li>
+                  {% endfor %}
+              {% endblock %}
+            </ul>
+          </div>
+        </nav>
+      <main>
+        <div class="container">
+          <div class="content">{% block content %}{% endblock %}</div>
+        </div>
+      </main>
+    </div>
+      <footer>
+        <div class="footer container">
+
+        </div>
+      </footer>
+    </body>
+</html>
