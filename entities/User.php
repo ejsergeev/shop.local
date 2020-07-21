@@ -11,4 +11,5 @@ class User extends Entity
   public $user_password;
   public $user_email;
   public $user_phone;
+  public $isAdmin;
 }
