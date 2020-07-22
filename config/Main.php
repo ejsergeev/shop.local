@@ -9,7 +9,7 @@ return [
       'config' => [
         'driver' => 'mysql',
         'host' => 'localhost',
-        'dbname' => 'gbphp_db',
+        'dbname' => 'shop_db',
         'charset' => 'UTF8',
         'username' => 'root',
         'password' => '',
